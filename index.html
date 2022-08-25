@@ -1,11 +1,74 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>[Name] [Surname] - Recruitment task</title>
-</head>
-<body>
 
+<head>
+  <!-- Required meta tags -->
+  <title>Michał Stanio - Recruitment task</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Michał Stanio">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ==================
+      NAV BAR
+================== -->
+  <nav class="navbar">
+    <a aria-label="Reset Settings" id="basic" href="#">Reset</a>
+    <a aria-label="Night Mode" id="night" href="#">Night</a>
+    
+    <div class="dropdown">
+      <button class="dropbtn">Size
+      </button>
+      <div class="dropdown-content">
+        <a aria-label="1.5 zoom" id="zoom-1.5" href="#">1.5</a>
+        <a aria-label="2.0 zoom" id="zoom-2.0" href="#">2.0</a>
+        <a id="zoom-reset" href="#">reset</a>
+      </div>
+    </div>
+  </nav>
+
+<!-- ==================
+      MODEL/ALERT
+================== -->
+  <div class="render">
+    <div class="black none"></div>
+    <div class="alert--render none">
+      <button class="alert--render--btn" aria-label="Close">X</button>
+      <h2 class="alert--render--header">Alert!</h2>
+      <p class="alert--render--count"></p>
+      <button class="reset none">Reset Count ?</button>
+    </div>
+  </div>
+
+<!-- ==================
+      Module
+================== -->
+  <Section class="module">
+    <div class="module--imgdiv">
+      <picture class="module--imgdiv--img">
+        <source srcset="/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1,c_fill,g_auto__c_scale,w_767.jpg"
+          media="(aspect-ratio: 1/1)">
+        <source srcset="/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3,c_fill,g_auto__c_scale,w_694.jpg"
+          media="(aspect-ratio: 4/3)">
+        <source srcset="/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_16_9,c_fill,g_auto__c_scale,w_720.jpg"
+          media="(aspect-ratio: 16/9)">
+        <img src="/images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg" alt="sunset over the sea beach" />
+      </picture>
+    </div>
+    <div class="module--infodiv">
+      <h2 class="module--infodiv--header">Lorem Ipsum</h2>
+      <p class="module--infodiv--text">Infinitely scalable, feature-rich and cloud-native data management and protection
+        for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.
+      </p>
+      <button class="module--infodiv--btn">Button</button>
+    </div>
+  </Section>
+  <script src="./src/js/main.js"></script>
 </body>
+</html>

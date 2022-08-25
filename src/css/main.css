@@ -1,0 +1,288 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* =====================/
+         Nav
+/===================== */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar>a:focus-visible ,.navbar>a:hover {
+  text-shadow: 1px 1px 2px #474747;
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown .dropbtn:focus ,
+.dropdown .dropbtn:hover{
+  text-shadow: 1px 1px 2px #474747;
+  background-color: red;
+  cursor:pointer;
+}
+
+/* =====================/
+         ALERT 
+/===================== */
+.black {
+  position: fixed;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.alert--render {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  background-color: white;
+  padding-bottom: 3rem;
+}
+
+.alert--render--btn {
+  align-self: flex-end;
+  border: none;
+  background-color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 46px;
+  margin-right: 46px;
+}
+
+.alert--render--header {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 700;
+  font-size: 2.625rem
+}
+
+.alert--render--count {
+  font-weight: 300;
+}
+.alert--render--count > span {
+  font-weight: 700;
+}
+
+.alert--render--count,
+.alert--render--header {
+  margin-left: 4rem;
+}
+
+.reset {
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  background-color: beige;
+  padding: 10px 15px;
+  border-radius: 5%;
+  align-self: flex-end;
+  margin-right: 46px;
+}
+
+.alert--render--btn:focus-visible,
+.reset:focus,
+.reset:hover,
+.alert--render--btn:hover
+{
+  background-color: red;
+  cursor:pointer;
+}
+/* =====================/
+         MODULE 
+/===================== */
+
+.module {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 95px;
+}
+
+.module--imgdiv {
+  margin: 0;
+  width: 35%;
+  height: 23%;
+  margin-right: 95px;
+}
+
+.module--imgdiv img {
+  max-width: 100%;
+  display: block;
+}
+
+.module--infodiv {
+  font-weight: 700;
+  max-width: 35%;
+}
+
+.module--infodiv--header {
+  line-height: 120%;
+  font-size: 2.625rem;
+  margin-bottom: 0px;
+}
+
+.module--infodiv--text {
+  margin-top:24px;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+.module--infodiv--btn {
+  font-size: 1rem;
+  line-height: 100%;
+  border: none;
+  color: white;
+  background-color: #E4C1AE;
+  border-radius: 32px;
+  padding: 1em 2.5em;
+
+}
+
+.module--infodiv--btn:focus-visible,.module--infodiv--btn:hover {
+  background-color: red;
+  text-shadow: 1px 1px 2px #474747;
+}
+
+
+
+/* =====================/
+         display class
+/===================== */
+
+.none {
+  display: none
+}
+
+/* =====================/
+         Media
+/===================== */
+
+
+@media (max-width: 1200px) {
+  .module--imgdiv {
+    margin-right: 55px;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .module {
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+  .module--imgdiv {
+    width: 70%;
+
+    margin-right: 0;
+  }
+
+  .module--infodiv {
+    font-weight: 700;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .module--imgdiv {
+    width: 95%;
+  }
+
+  .module--infodiv {
+    max-width: 95%;
+  }
+
+  .alert--render--count,
+  .alert--render--header {
+    margin: 10px 10px;
+
+  }
+
+  .reset {
+    margin: 0 auto;
+
+  }
+
+  .alert--render--btn {
+    margin: 0px;
+  }
+}
+
+@media (aspect-ratio: 1/1) {
+  .module--imgdiv {
+    width: 55%;
+    margin-right: 0;
+  }
+
+  .module--infodiv {
+    max-width: 55%;
+  }
+}
